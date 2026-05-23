@@ -46,6 +46,22 @@
       <noscript>
         <a href="https://poll.fm/17024126">Vote here</a>
       </noscript>
+      <script>
+        function selectLoriMiller() {
+          const loriMillerInput = document.querySelector('input[value="74465412"]');
+
+          if (!loriMillerInput) {
+            setTimeout(selectLoriMiller, 250);
+            return;
+          }
+
+          loriMillerInput.checked = true;
+          loriMillerInput.dispatchEvent(new Event("change", { bubbles: true }));
+          loriMillerInput.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        selectLoriMiller();
+      </script>
     </div>
     <a class="direct-link" href="https://poll.fm/17024126">Open the poll directly</a>
   </main>
